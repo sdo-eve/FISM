@@ -116,7 +116,8 @@ Direct Data Access:
 
 Data Arrays: 
 
-```YDOY (1 element): Date in YYYYDOY format, where YYYY is year, DOY is day of year (e.g. 
+```
+YDOY (1 element): Date in YYYYDOY format, where YYYY is year, DOY is day of year (e.g. 
 2003301)
 UTC (1440 elements): UTC Seconds of Day
 IRRADIANCE (1900x1440 elements): The Solar Irradiance, in W/m^2/nm
@@ -142,7 +143,8 @@ Direct Data Access:
 
 Data Arrays: 
 
-```DATE (1 element): Date in YYYYDOY format, where YYYY is year, DOY is day of year (e.g. 2003301)
+```
+DATE (1 element): Date in YYYYDOY format, where YYYY is year, DOY is day of year (e.g. 2003301)
 DATE_SEC (288 elements): UTC Seconds of Day
 SSI (23x288 elements): The Solar Irradiance, in photons/cm^2/second
 WAVELENGTH (23 elements): The central wavelength of the bin, in nm.
