@@ -1,0 +1,64 @@
+
+
+0.2  08/25/09
+Added app.version to build script
+Added functionality to create versioned tar file from build script
+Changed staged file names to those requested by Phil.
+mgii data source change:
+#      url = "ftp://laspftp.colorado.edu/pub/solstice/sorce_solstice_mg2_index.txt"
+      url = "ftp://laspftp.colorado.edu/pub/solstice/composite_mg2.dat"
+
+0.3 11/05/09
+Added code to replace value of '.' in with missing data value in 
+historical data
+
+0.4 02/11/10
+corrected some error handling
+removed lengthy debug output
+for datasets required endYear values, modified to be relative to current year
+added timestamp to output
+
+0.5  02/25/10
+Added code to noaa event report fetcher to retrieve 2010 daily files, as
+current tar.gz file isn't provided (unlike prior years)
+Improved error handling:
+  Each fetcher returns success or failure
+  Driver stageProxyData decides whether to abort or continue
+  (If aborted, Hudson considers job a failure)
+
+0.6  09/29/10
+Added output to display end time.
+f10.7 path updated from:
+  ftp://ftp.ngdc.noaa.gov/STP/SOLAR_DATA/SOLAR_RADIO/FLUX/DAILYPLT.OBS
+to:
+  ftp://ftp.ngdc.noaa.gov/STP/SOLAR_DATA/SOLAR_RADIO/FLUX/Penticton_Observed/daily/DAILYPLT.OBS
+
+  
+...
+1.2  
+Env variable pointing to root of local data location is now intended
+to be more generic rather than oriented around FISM needs.  The intent
+is that this code will stage data generally.  Individual needs,
+such as FISM, will get a subsequent separate copy or link to the 
+general store.
+Added mains to all DatasetFetchers
+Improved path and file naming convention/expectation/handling
+
+SEE data now being fetched to <LOCAL_ROOT>lasp/timed_see/
+NOAA event reports now being fetched to <LOCAL_ROOT>noaa/noaa_events/
+
+============================================================
+2.0  06/17/11
+Code now relies on config file (config.py) as to where to place each dataset.
+Now requires LOCAL_DATA_ROOT env var. as root for all destinations.
+
+11.28.11 TODO: change notes go here
+
+2.1  02/03/12
+Fetching of SEE data was modified.  Now we mirror these dirs from laspftp/pub/SEE Data as
+defined in config.py. These directories already contain the merged files, so those are no 
+longer fetched separately.
+
+2.2  03/12/12
+All configuration has put into the file config.py.  There dataset sources and destinations 
+are specified.  Also, can by used to configure pulling only a subset of datasets.

@@ -1,0 +1,17 @@
+# python readme is out of date
+code/python/README
+
+# python build properties
+code/python/build.properties
+code/python/build.xml
+
+# config files
+code/python/src/config_lisird.py
+
+# jar files
+code/python/lib/
+
+# won't work
+code/idl/datetime/datetime.pro
+
+

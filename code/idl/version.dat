@@ -1,0 +1,5 @@
+STRUCTURE = { VERSION: 0, REVISION: 0 }
+FORMAT = $(I,I)
+ 1 lines
+ 2 columns
+      6      1
